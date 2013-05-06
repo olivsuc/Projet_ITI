@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dao xmlns="http://jelix.org/ns/dao/1.0">
+    <datasources>
+        <primarytable name="vente" realname="vente" primarykey="id_vente" />
+        <!--Ajout de la table annonce pour aller y chercher le titre des annonces -->
+        <foreigntable name="myAnnonce" realname="annonce" primarykey="id_annonce" onforeignkey="id_annonce"/>
+        
+    </datasources>
+    <record>
+        <property name="id_vente" fieldname="id_vente" datatype="bigint" autoincrement="true"/>
+        <property name="prix_vente" fieldname="prix_vente" datatype="float" required="true"/>
+        <property name="id_utilisateur" fieldname="id_utilisateur" datatype="bigint" required="true" default=""/>
+        <property name="id_annonce" fieldname="id_annonce" datatype="bigint" required="true" default=""/>
+        <property name="id_categorie" fieldname="id_categorie" datatype="int" required="true" default=""/>
+        
+        <!--Ajout d'une propriété à l'objet vente qui pointera vers le titre d'annonce -->
+        <property name="titreAnnonce" fieldname="titre" datatype="varchar" table="myAnnonce"/>
+        <property name="descriptionAnnonce" fieldname="description" datatype="varchar" table="myAnnonce"/>
+        <property name="photoAnnonce" fieldname="photo" datatype="varchar" table="myAnnonce"/>
+    </record>
+    <factory>
+        <!--<method name="findByStage" type="select/selectfirst/delete/update/php">
+            <parameter name="" />
+            <values>
+                <value property="" value="" />
+            </values>
+            <conditions logic="and/or">
+                <eq property="" value="" />
+            </conditions>
+            <order>
+                <orderitem property="" way="asc/desc" />
+            </order>
+            <limit offset="" count=""/>
+            <body><![CDATA[
+            ]]></body>
+        </method>-->
+    </factory>
+</dao>

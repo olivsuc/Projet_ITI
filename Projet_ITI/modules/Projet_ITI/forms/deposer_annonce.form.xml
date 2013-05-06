@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://jelix.org/ns/forms/1.1">
+    
+    <hidden ref="id_utilisateur"/>
+    <hidden ref="id_annonce"/>
+    
+    
+    <input ref="login" type="email" required="true">
+         <label>email</label>
+    </input>
+    
+    
+    <textarea ref="titre">
+        <label>Saisissez ici le titre de l'annonce</label>
+    </textarea>
+    
+    <textarea ref="description">
+        <label>Saisissez ici la description de l'annonce</label>
+    </textarea>
+     
+    <upload ref="photo" mimetype="image/jpeg;image/pjpeg;image/png" maxsize="5000000">
+    <label>Photo liée à l'annonce</label>
+  </upload>
+    
+
+       <input ref="prix_vente">
+           <label>Prix en Euros</label>
+       </input>
+       
+
+       <menulist ref="choixCategorie">
+           <label>Categorie</label>
+           <item value="0" selected="True">Toutes catégories</item>
+<item class="titreRechercheCategorie" value="1">-- VEHICULES --</item>
+<item value="6">Voitures</item>
+<item value="7">Motos</item>
+       </menulist>
+       
+  
+  <radiobuttons ref="type_annonce" required="true">
+      <label>Type d'annonce</label>
+      <item value="Offre">Offre</item>
+      <item value="Demande">Demande</item>
+  </radiobuttons>
+  
+  <submit ref="valider">
+    <label>Veuillez valider</label>
+    <item value="svg">Sauvegarder</item>
+  </submit>
+       
+</form>

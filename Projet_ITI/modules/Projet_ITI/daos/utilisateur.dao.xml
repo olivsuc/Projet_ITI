@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dao xmlns="http://jelix.org/ns/dao/1.0">
+    <datasources>
+        <primarytable name="utilisateur" realname="utilisateur" primarykey="id_utilisateur" />
+    </datasources>
+    <record>
+        <property name="id_utilisateur" fieldname="id_utilisateur" datatype="bigint" autoincrement="true"/>
+        <property name="nom" fieldname="nom" datatype="varchar" required="true" maxlength="50"/>
+        <property name="prenom" fieldname="prenom" datatype="varchar" required="true" maxlength="50"/>
+        <property name="date_naissance" fieldname="date_naissance" datatype="date" default=""/>
+        <property name="num_voie" fieldname="num_voie" datatype="varchar" default="" maxlength="5"/>
+        <property name="nom_voie" fieldname="nom_voie" datatype="varchar" default="" maxlength="50"/>
+        <property name="code_postal" fieldname="code_postal" datatype="varchar" default="" maxlength="5"/>
+        <property name="ville" fieldname="ville" datatype="varchar" default="" maxlength="50"/>
+        <property name="login" fieldname="login" datatype="varchar" required="true" maxlength="50"/>
+        <property name="password" fieldname="mot_passe" datatype="varchar" required="true" maxlength="50"/>
+        <property name="montrer_photo" fieldname="montrer_photo" datatype="tinyint" default=""/>
+        <property name="montrer_infos" fieldname="montrer_infos" datatype="tinyint" default=""/>
+        <!--<property name="" fieldname="" datatype="string/int/float/date"
+        required="yes" maxlength="" minlength="" regexp="" sequence=""
+        updatepattern="" insertpattern="" selectpattern=""/>-->
+    </record>
+    <factory>
+        <method name="getByLoginPassword" type="selectfirst">
+            <parameter name="login" />
+            <parameter name="password" />
+            <conditions>
+                <eq property="login" expr="$login" />
+                <eq property="password" expr="$password" />
+            </conditions>
+        </method>
+        <method name="getByLogin" type="selectfirst">
+            <parameter name="login" />
+            <conditions>
+                <eq property="login" expr="$login" />
+            </conditions>
+        </method>
+        <method name="updatePassword" type="update">
+            <parameter name="login" />
+            <parameter name="password" />
+            <values>
+                <value property="password" expr="$password"/>
+            </values>
+            <conditions>
+                <eq property="login" expr="$login" />
+            </conditions>
+        </method>
+        <method name="deleteByLogin" type="delete">
+            <parameter name="login" />
+            <conditions>
+                <eq property="login" expr="$login" />
+            </conditions>
+        </method>
+        <method name="findByLogin" type="select">
+            <parameter name="pattern" />
+            <conditions>
+                <like property="login" expr="$pattern" />
+            </conditions>
+            <order>
+                <orderitem property="login" way="asc" />
+            </order>
+        </method>
+        <method name="findAll" type="select">
+            <order>
+                <orderitem property="login" way="asc" />
+            </order>
+        </method>
+    </factory>
+</dao>

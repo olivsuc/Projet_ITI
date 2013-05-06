@@ -1,0 +1,112 @@
+
+header{        
+        border-width: 3px;
+        border-style: solid;
+        text-align: center;
+        position: relative;
+        height: 45px;
+        width:100%;
+}
+
+#blockOptions{
+    
+        border-width: 3px;
+        border-style: solid;
+        text-align: center;
+        position: relative;
+        height: 40px;
+        width:100%;
+        top:5px;}
+
+
+        #ongletMonCompte{    
+        border-width: 3px;
+        border-style: solid;
+        text-align: center;
+        position: absolute;
+        left:2%;
+        width:30%;
+        height:90%;
+        }
+
+        #lienMonCompte {
+            display:block;width:100%;height:100%;
+        }
+        
+        #ongletDeposerAnnonce{    
+        border-width: 3px;
+        border-style: solid;
+        text-align: center;
+        position: absolute;
+        left:34.5%;
+        width:30%;
+        height:90%;
+        }
+
+
+        #ongletAnnonces{    
+        border-width: 3px;
+        border-style: solid;
+        text-align: center;
+        position: absolute;
+        left:67%;
+        width:30%;
+        height:90%;
+}
+
+
+        
+#blockRecherche{
+        border-width: 3px;
+        border-style: solid;
+        text-align: center;
+        position: relative;
+        height: 100px;
+        width:100%;
+        top:10px;
+        }
+
+
+
+#blockPage{  
+        border-width: 3px;
+        border-style: solid;
+        text-align: center;
+        position: relative;
+        width: 100%;
+        height:450px;
+        top:15px;
+}
+
+
+        #navContacts{    
+        border-width: 3px;
+        border-style: solid;
+        text-align: center;
+        position: absolute;
+        height: 80%;
+        width:18%;
+        bottom: 10%;
+        left: 1%;}
+
+
+        #blockPrincipal{    
+        border-width: 3px;
+        border-style: solid;
+        text-align: center;
+        position: absolute;
+        width: 65%;
+        height:80%;
+        left:20%;}
+        
+
+        #navMarge{   
+        border-width: 3px;
+        border-style: solid;
+        text-align: center;
+        position: absolute;
+        right: 1%;
+        height: 80%;
+        width:10%;
+        bottom: 10%;
+        }

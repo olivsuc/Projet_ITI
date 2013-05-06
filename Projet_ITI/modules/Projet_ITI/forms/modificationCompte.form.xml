@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form xmlns="http://jelix.org/ns/forms/1.1">
+    <hidden ref="id_utilisateur"/>
+    
+    <input ref="nom">
+        <label>Nom  </label>
+    </input>
+    
+    
+    <input ref="prenom">
+        <label>Prénom </label>
+    </input>
+    
+    <input ref="num_voie">
+        <label>N°</label>
+    </input>
+    
+    <input ref="nom_voie">
+        <label>Nom de rue</label>
+    </input>
+    
+    <input ref="code_postal">
+        <label>Code postal</label>
+    </input>
+    
+    <input ref="ville">
+        <label>Ville</label>
+    </input>
+      
+             
+    <captcha ref="antispam">
+            <label>Vérification anti-spam </label>
+    </captcha>
+    
+    <submit  ref="valider" > 
+            <label>Valider</label>
+    </submit>
+        
+    <reset ref="reinit">
+            <label>Réinitialiser</label>
+    </reset>
+        
+</form>
